@@ -1,3 +1,86 @@
-export default function Home() {
-  return <></>;
-}
+'use client';
+
+import type { FC } from 'react';
+import { useState, useEffect } from 'react';
+import { TaskInput } from '@/components/task-input';
+import { TaskList } from '@/components/task-list';
+import type { Task } from '@/types/task';
+
+const LOCAL_STORAGE_KEY = 'taskflow-tasks';
+
+const Home: FC = () => {
+  const [tasks, setTasks] = useState<Task[]>([]);
+  const [isClient, setIsClient] = useState(false);
+
+  // Load tasks from local storage on component mount (client-side only)
+  useEffect(() => {
+    setIsClient(true); // Indicate that we are now on the client
+    try {
+      const storedTasks = localStorage.getItem(LOCAL_STORAGE_KEY);
+      if (storedTasks) {
+        setTasks(JSON.parse(storedTasks));
+      }
+    } catch (error) {
+      console.error("Failed to load tasks from local storage:", error);
+      // Optionally handle the error, e.g., clear invalid storage
+      // localStorage.removeItem(LOCAL_STORAGE_KEY);
+    }
+  }, []);
+
+  // Save tasks to local storage whenever the tasks state changes (client-side only)
+  useEffect(() => {
+    if (isClient) { // Only run on the client after initial render
+      try {
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(tasks));
+      } catch (error) {
+        console.error("Failed to save tasks to local storage:", error);
+      }
+    }
+  }, [tasks, isClient]);
+
+  const handleAddTask = (text: string) => {
+    const newTask: Task = {
+      id: Date.now().toString(), // Simple unique ID generator
+      text,
+      completed: false,
+    };
+    setTasks((prevTasks) => [...prevTasks, newTask]);
+  };
+
+  const handleToggleComplete = (id: string) => {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === id ? { ...task, completed: !task.completed } : task
+      )
+    );
+  };
+
+  const handleDeleteTask = (id: string) => {
+    setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
+  };
+
+  return (
+    <div className="container mx-auto max-w-2xl py-8 px-4">
+      <header className="mb-8">
+        <h1 className="text-4xl font-bold text-center text-primary mb-6">
+          TaskFlow
+        </h1>
+        <TaskInput onAddTask={handleAddTask} />
+      </header>
+      <main>
+        {isClient ? ( // Only render TaskList on the client to avoid hydration issues
+           <TaskList
+             tasks={tasks}
+             onToggleComplete={handleToggleComplete}
+             onDeleteTask={handleDeleteTask}
+           />
+        ) : (
+          // Optional: Show a loading state or placeholder while waiting for client-side render
+          <p className="text-center text-muted-foreground">Loading tasks...</p>
+        )}
+      </main>
+    </div>
+  );
+};
+
+export default Home;

@@ -18,12 +18,17 @@ const Home: FC = () => {
     try {
       const storedTasks = localStorage.getItem(LOCAL_STORAGE_KEY);
       if (storedTasks) {
-        setTasks(JSON.parse(storedTasks));
+        // Ensure loaded tasks have the new fields, provide defaults if missing
+        const loadedTasks: Task[] = JSON.parse(storedTasks).map((task: any) => ({
+          ...task,
+          createdAt: task.createdAt || new Date(0).toISOString(), // Default to epoch if missing
+          completedAt: task.completedAt, // Keep undefined if missing
+        }));
+        setTasks(loadedTasks);
       }
     } catch (error) {
       console.error("Failed to load tasks from local storage:", error);
-      // Optionally handle the error, e.g., clear invalid storage
-      // localStorage.removeItem(LOCAL_STORAGE_KEY);
+      // localStorage.removeItem(LOCAL_STORAGE_KEY); // Optionally clear invalid storage
     }
   }, []);
 
@@ -43,6 +48,7 @@ const Home: FC = () => {
       id: Date.now().toString(), // Simple unique ID generator
       text,
       completed: false,
+      createdAt: new Date().toISOString(), // Set creation timestamp
     };
     setTasks((prevTasks) => [...prevTasks, newTask]);
   };
@@ -50,7 +56,14 @@ const Home: FC = () => {
   const handleToggleComplete = (id: string) => {
     setTasks((prevTasks) =>
       prevTasks.map((task) =>
-        task.id === id ? { ...task, completed: !task.completed } : task
+        task.id === id
+          ? {
+              ...task,
+              completed: !task.completed,
+              // Set completedAt if marking complete, otherwise remove it
+              completedAt: !task.completed ? new Date().toISOString() : undefined,
+            }
+          : task
       )
     );
   };

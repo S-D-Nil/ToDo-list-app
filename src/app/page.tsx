@@ -63,7 +63,7 @@ const Home: FC = () => {
     <div className="container mx-auto max-w-2xl py-8 px-4">
       <header className="mb-8">
         <h1 className="text-4xl font-bold text-center text-primary mb-6">
-          TaskFlow
+          ToDo list
         </h1>
         <TaskInput onAddTask={handleAddTask} />
       </header>

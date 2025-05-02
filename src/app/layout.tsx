@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'ToDo list', // Updated App Name
-  description: 'A simple and clean todo list application.', // Updated Description
+  title: 'TaskFlow', // Updated App Name based on proposal
+  description: 'A simple and clean todo list application.',
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning> {/* Added suppressHydrationWarning */}
+    <html lang="en" suppressHydrationWarning> {/* Removed whitespace here */}
       <body
         className={cn(
           'min-h-screen bg-background font-sans antialiased',

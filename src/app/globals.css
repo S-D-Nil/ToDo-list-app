@@ -58,3 +58,18 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Footer Styling */
+.fixed-bottom {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  background-color: black; /* Black background */
+  color: #fff; /* White text */
+  text-align: center;
+  padding: 8px; /* Remove padding to make height exactly 10px */
+  border-top-left-radius: 10px; /* Top-left border radius */
+  border-top-right-radius: 10px; /* Top-right border radius */
+  height: 30px; /* Footer height */
+}

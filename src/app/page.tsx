@@ -74,10 +74,20 @@ const Home: FC = () => {
 
   return (
     <div className="container mx-auto max-w-2xl py-8 px-4">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold text-center text-primary mb-6">
-          ToDo list {/* Updated Heading */}
+      <header className="mb-8 relative"> {/* Added relative positioning */}
+        <img
+          src="https://i.postimg.cc/HLPNh8SF/Me8.jpg"
+          alt="Profile Picture"
+          className="absolute top-[-10px] left-4 w-16 h-16 rounded-full object-cover border-2 border-primary" // Adjusted top and left for fixed positioning
+        />
+        <h1 className="text-4xl font-bold text-center text-primary mb-6 mt-4 pt-4"> {/* Adjusted margin-top and added padding-top */}
+          ToDo list
+          {/* Updated Heading */}
+        
         </h1>
+        <h2 className="text-center" style={{ fontSize: '10px', transform: 'translate(50px, -30px)' }}>
+          By S.D.Nil
+        </h2>
         <TaskInput onAddTask={handleAddTask} />
       </header>
       <main>
@@ -92,8 +102,10 @@ const Home: FC = () => {
           <p className="text-center text-muted-foreground">Loading tasks...</p>
         )}
       </main>
+      <footer className="fixed-bottom"> {/* Added the class name 'fixed-bottom' */}
+        <p className="text-center">© S.D.Nil | All rights reserved | 2025 ©</p>
+      </footer>
     </div>
   );
 };
-
 export default Home;

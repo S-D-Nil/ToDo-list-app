@@ -35,6 +35,7 @@ export default function RootLayout({
         {children}
         <Toaster /> {/* Add Toaster */}
         <div className="social-icons" style={{ textAlign: 'center', marginBottom: '20px', fontSize: '25px' }}> {/* Added a div for centering and spacing */}
+          <h3 style={{ fontSize: '15px' }}>Contacts</h3> {/* Added Contacts heading */}
           <a href="https://www.instagram.com/_s.d.nil_?igsh=YzljYTk1ODg3Zg==" target="_blank" className="footer-social" style={{ margin: '0 10px' }}><i className="bx bxl-instagram" style={{ fontSize: '25px' }}></i></a> {/* Added margin for spacing */}
           <a href="https://www.facebook.com/share/15ZjjcF7VE/" target="_blank" className="footer-social" style={{ margin: '0 10px' }}><i className="bx bxl-facebook" style={{ fontSize: '25px' }}></i></a> {/* Added margin for spacing */}
           <a href="https://github.com/S-D-Nil" target="_blank" className="about-social-icon" style={{ margin: '0 10px' }}><i className="bx bxl-github" style={{ fontSize: '25px' }}></i></a> {/* Added margin for spacing */}

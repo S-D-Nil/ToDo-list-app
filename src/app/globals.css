@@ -6,6 +6,11 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+
+}
+
 @layer base {
   :root {
     /* Dark Theme based on #222327 background */

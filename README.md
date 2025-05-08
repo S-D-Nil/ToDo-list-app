@@ -1,4 +1,4 @@
-<h1>ToDo List Application</h1><br><h3>By</h3><br><h1> S.D.Nil </h1>
+<h1>ToDo List Application<br><h3>By</h3><br> S.D.Nil </h1>
 
 ---
 

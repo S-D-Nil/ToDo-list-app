@@ -1,10 +1,15 @@
-# ToDo List Application
+<h1>ToDo List Application</h1><br><h3>By</h3><br><h1> S.D.Nil </h1>
+
+---
 
 Welcome to the official repository for my interactive ToDo List application!  
 A clean, efficient task management solution built Typeswift.
 
-## 🔗 Live Demo
-[View Live Demo](https://s-d-nil.github.io/ToDo-list-app/)
+---
+
+## 🌐 Live Demo
+
+[![View Website](https://img.shields.io/badge/View_Website-Click_Here-blue?style=for-the-badge)](https://9000-idx-studio-1746170861226.cluster-ubrd2huk7jh6otbgyei4h62ope.cloudworkstations.dev)
 
 ---
 
@@ -19,7 +24,7 @@ A clean, efficient task management solution built Typeswift.
 ---
 
 ## 🛠️ Built With
-- **Typeswift** - Backend development
+- **Typescript** - Backend development
 - **HTML5** – Semantic structure and accessibility
 - **CSS3** – Modern styling with flexbox
 - **JavaScript** – Core functionality and interactivity
@@ -30,7 +35,7 @@ A clean, efficient task management solution built Typeswift.
 ## 🧠 Skills Highlighted
 
 ### Development
-`Typeswift`,`HTML5`, `CSS3`, `JavaScript`, `DOM Manipulation`, `LocalStorage API`
+`Typescript`,`HTML5`, `CSS3`, `JavaScript`, `DOM Manipulation`, `LocalStorage API`
 
 ### Design Principles
 `User Experience`, `Minimalist Design`, `Responsive Layout`,`Dynamic color palate`

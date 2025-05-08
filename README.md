@@ -29,6 +29,7 @@ A clean, efficient task management solution built Typeswift.</div>
 - **CSS3** – Modern styling with flexbox
 - **JavaScript** – Core functionality and interactivity
 - **Web Storage API** – Persistent task storage
+- **Nix** - Packages
 
 ---
 

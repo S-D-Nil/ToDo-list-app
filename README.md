@@ -1,9 +1,9 @@
-<h1>ToDo List Application<br><h3>By</h3><br> S.D.Nil </h1>
+<div align="center"><h1>ToDo List Application<br>By<br> S.D.Nil </h1></div>
 
 ---
 
-Welcome to the official repository for my interactive ToDo List application!  
-A clean, efficient task management solution built Typeswift.
+<div align="center">Welcome to the official repository for my interactive ToDo List application!  
+A clean, efficient task management solution built Typeswift.</div>
 
 ---
 
@@ -42,7 +42,7 @@ A clean, efficient task management solution built Typeswift.
 
 ---
 
-## 📸 Screenshots
+## 📸 Photos
 
 ### Home page
 ![Home page](https://i.postimg.cc/j5TC2PSS/Project-6.jpg)
@@ -52,8 +52,8 @@ A clean, efficient task management solution built Typeswift.
 
 
 ---
-
-## ✍️ Author
+<div align="center">
+<h1>✍️ Author</h1>
 
 **S.D.Nil**  
 Passionate about crafting smooth user experiences and beautiful interfaces.
@@ -62,6 +62,7 @@ Passionate about crafting smooth user experiences and beautiful interfaces.
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/_s.d.nil_)  
 [![Codepen](https://img.shields.io/badge/Codepen-000000?logo=codepen&logoColor=white)](https://codepen.io/hidinhgy-the-selector)  
 [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:gamersclub3232@gmail.com)
+</div>
 
 ---
 

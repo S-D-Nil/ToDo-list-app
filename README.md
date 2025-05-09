@@ -9,7 +9,7 @@ A clean, efficient task management solution built Typescript.</div>
 
 ## 🌐 Live Demo
 
-[![View Website](https://img.shields.io/badge/View_Website-Click_Here-blue?style=for-the-badge)](https://9000-idx-studio-1746170861226.cluster-ubrd2huk7jh6otbgyei4h62ope.cloudworkstations.dev)
+[![View Website](https://img.shields.io/badge/View_Website-Click_Here-blue?style=for-the-badge)](https://studio.firebase.google.com/u/0/studio-44368020)
 
 ---
 

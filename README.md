@@ -9,9 +9,7 @@ A clean, efficient task management solution built Typescript.</div>
 
 ## 🌐 Live Demo
 
-[![View Website](https://img.shields.io/badge/View_Website-Click_Here-blue?style=for-the-badge)](https://studio.firebase.google.com/u/0/studio-44368020)
-
-<p>Please be patient.<br>It will take less than 1 minute.</p> 
+[![View Website](https://img.shields.io/badge/View_Website-Click_Here-blue?style=for-the-badge)](https://to-do-list-app-six-topaz.vercel.app/)
 
 ---
 

@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'TaskFlow', // Updated App Name based on proposal
+  title: 'ToDo list by S.D.Nil', // Updated App Name based on proposal
   description: 'A simple and clean todo list application.',
 };
 

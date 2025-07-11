@@ -1,5 +1,4 @@
-# **App Name**: TaskFlow
-
+# **ToDo list app**<br><h3> By</h3><br><h1> S.D.Nil</h1>
 ## Core Features:
 
 - Task Input: Input bar at the top of the page allows users to add new tasks.

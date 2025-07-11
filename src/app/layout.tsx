@@ -19,14 +19,15 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode; // Fixed type definition for children
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
- <link rel="icon" type="image/x-icon" href="https://i.loli.net/2021/06/03/lFg2V4WUcmkB98G.png"/>
+        
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
       </head>
+      <link rel="icon" type="image/png" href="https://i.postimg.cc/63BbGZrp/android-chrome-192x192.png"/>
       <body // Removed whitespace between html and body
         className={cn(
           'min-h-screen bg-background font-sans antialiased',
